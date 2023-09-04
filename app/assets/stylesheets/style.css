@@ -64,7 +64,6 @@ h2 {
   list-style: none;
 }
 
-
 .err {
   width: 30vw;
   border: 1px solid rgb(255, 255, 255);
@@ -82,4 +81,3 @@ h2 {
   50% { background-color: rgb(252, 128, 128); }
   100% { background-color: rgb(236, 105, 105); }
 }
-
