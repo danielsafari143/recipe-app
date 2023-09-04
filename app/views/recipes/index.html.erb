@@ -4,7 +4,7 @@
             <li class="recipe-item">
                 <div class="recipe-item-para">
                     <h3> <%= recipe.name%></h3>
-                    <button>Remove</button>
+                    <button><%= link_to 'Remove' , url_for(action: 'destroy' , id: recipe.id ) , data: {turbo_method: :delete}%></button>
                 </div>
                 <div>
                     <p> <%= recipe.description%></p>
