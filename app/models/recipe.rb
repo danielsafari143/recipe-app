@@ -1,5 +1,7 @@
 class Recipe < ApplicationRecord
-  has_many :recipe_food 
+  has_many :recipe_foods
+  belongs_to :user, class_name: 'User'
+  has_many :foods, through: :recipe_foods
 
   validates :name, presence: true, length: { minmum: 2, maximun: 50 }
   validates :preperation_time, presence: true
