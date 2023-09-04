@@ -127,3 +127,8 @@ h2 {
     color: white;
     text-decoration: none;
 }
+
+h3 a {
+    color: rgb(111, 111, 233);
+    text-decoration: none;
+}

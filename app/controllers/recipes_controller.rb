@@ -7,6 +7,7 @@ class RecipesController < ApplicationController
 
   def destroy
     @recipe = Recipe.find_by(id: params[:id])
+    authorize! :destroy, @recipe
     @recipe.destroy
     redirect_to '/index'
   end
