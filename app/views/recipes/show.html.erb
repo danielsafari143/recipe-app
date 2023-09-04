@@ -1,0 +1,29 @@
+<div class="recipe-detail">
+        <h2 class="recipe-title">Recipe <%= @recipe.id%></h2>
+
+        <div class="detail">
+            <div class="detail-item">
+                <div>
+                    <p>Preparation time : <%= @recipe.preperation_time%> hour</p>
+                    <p>Cooking time : <%= @recipe.cooking_time%> hour</p>
+                    <p class="rcp-step">Steps goes here. . .</p>
+                </div>
+                
+                <%= form_with(model: @recipe, local: true) do |form| %>
+                <div class="custom-control custom-switch">
+                    <%= form.check_box :public, class: "custom-control-input", id: "customSwitch1"   %>
+                        <label class="custom-control-label" for="customSwitch1">Status: </label>
+                </div>
+
+                    <!--div class="actions">
+                        <%= form.submit %>
+                    </div-->
+                <% end %>
+            </div>
+            <div class="buttons">
+                    <button>Generate shopping list</button>
+                     <button>Add ingredient</button>
+            </div>
+        </div>
+        
+</div>

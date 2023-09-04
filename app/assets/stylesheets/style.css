@@ -1,9 +1,10 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@200&family=Montserrat&family=Nunito&family=Orbitron&family=Rajdhani:wght@300&family=Roboto+Slab:wght@200&family=Saira:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400&family=Montserrat&family=Nunito&family=Orbitron&family=Rajdhani:wght@400&family=Roboto+Slab:wght@400&family=Saira:wght@400&display=swap');
 
 * {
   padding: 0;
   margin: 0;
+  margin-top: 30px;
   box-sizing: border-box;
 }
 
@@ -90,6 +91,8 @@ h2 {
 }
 
 .recipe-item {
+  font-family: 'Gothic A1', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -131,4 +134,56 @@ h2 {
 .recipe-item-para button a {
   color: white;
   text-decoration: none;
+}
+
+.recipe-title {
+  font-family: 'Gothic A1', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Nunito', sans-serif;
+  font-family: 'Orbitron', sans-serif;
+  font-family: 'Rajdhani', sans-serif;
+  font-family: 'Roboto Slab', serif;
+  font-family: 'Saira', sans-serif;
+}
+
+.recipe-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+  padding: 10px;
+}
+
+.detail-item {
+  font-family: 'Gothic A1', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 80vw;
+}
+
+.rcp-step {
+  font-size: large;
+  font-weight: bolder;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 80vw;
+  padding: 10px;
+}
+
+.buttons button {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: rgb(111, 111, 233);
+  color: white;
+  border: none;
 }
