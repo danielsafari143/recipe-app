@@ -1,87 +1,85 @@
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .field input {
-    width: 30vw;
-    padding: 10px;
-    border-radius: 5px;
-    object-fit: contain;
+  width: 30vw;
+  padding: 10px;
+  border-radius: 5px;
+  object-fit: contain;
 }
 
 form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 30vw;
-    gap: 10px ;
-    margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30vw;
+  gap: 10px;
+  margin-top: 20px;
 }
 
 .links {
-    width: 100%;
+  width: 100%;
 }
 
 .actions input {
-    padding: 10px;
-    width: 30vw;
-    border-radius: 5px;
-    background-color: rgb(111, 111, 233);
-    color: white;
-    border: none;
+  padding: 10px;
+  width: 30vw;
+  border-radius: 5px;
+  background-color: rgb(111, 111, 233);
+  color: white;
+  border: none;
 }
 
 h2 {
-    color: rgb(111, 111, 233);
+  color: rgb(111, 111, 233);
 }
 
-.links a{
-    text-decoration: none;
-    color: rgb(111, 111, 233);
-    font-weight: bolder;
-    margin-bottom: 5px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.links a {
+  text-decoration: none;
+  color: rgb(111, 111, 233);
+  font-weight: bolder;
+  margin-bottom: 5px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .alert {
-    color: rgb(255, 50, 50);
-    font-weight: bolder;
+  color: rgb(255, 50, 50);
+  font-weight: bolder;
 }
 
-.err li{
-    list-style: none;
+.err li {
+  list-style: none;
 }
 
 
-  
-  .err {
-    width: 30vw;
-    border: 1px solid rgb(255, 255, 255);
-    color: white;
-    background-color: rgb(236, 105, 105);
-    padding: 10px;
-    border-radius: 3px;
-    animation-name: example;
-    animation-duration: 4s;
-  }
-  
-  @keyframes example {
-    0%   {background-color: rgb(255, 255, 255);}
-    25%  {background-color: rgb(255, 171, 171);}
-    50%  {background-color: rgb(252, 128, 128);}
-    100% {background-color: rgb(236, 105, 105);}
-  }
-  
- 
+.err {
+  width: 30vw;
+  border: 1px solid rgb(255, 255, 255);
+  color: white;
+  background-color: rgb(236, 105, 105);
+  padding: 10px;
+  border-radius: 3px;
+  animation-name: example;
+  animation-duration: 4s;
+}
+
+@keyframes example {
+  0% { background-color: rgb(255, 255, 255); }
+  25% { background-color: rgb(255, 171, 171); }
+  50% { background-color: rgb(252, 128, 128); }
+  100% { background-color: rgb(236, 105, 105); }
+}
+
