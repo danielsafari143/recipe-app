@@ -1,0 +1,15 @@
+<div class="recipes-list">
+    <ul class= "recipe-item-list">
+        <% @recipes.each do |recipe| %>
+            <li class="recipe-item">
+                <div class="recipe-item-para">
+                    <h3> <%= recipe.name%></h3>
+                    <button>Remove</button>
+                </div>
+                <div>
+                    <p> <%= recipe.description%></p>
+                </div>
+            </li>
+        <%end%>
+    </ul>
+</div>
