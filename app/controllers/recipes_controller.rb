@@ -15,4 +15,10 @@ class RecipesController < ApplicationController
     @recipe.destroy
     redirect_to '/index'
   end
+
+  def update 
+   @recipe = Recipe.find_by(id: params[:id])
+   @recipe.public = !@recipe.public
+   @recipe.save
+  end
 end

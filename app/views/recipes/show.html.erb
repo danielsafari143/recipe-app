@@ -1,5 +1,5 @@
 <div class="recipe-detail">
-        <h2 class="recipe-title">Recipe <%= @recipe.id%></h2>
+        <h2 class="recipe-title"><%= @recipe.name%></h2>
 
         <div class="detail">
             <div class="detail-item">
@@ -9,21 +9,37 @@
                     <p class="rcp-step">Steps goes here. . .</p>
                 </div>
                 
-                <%= form_with(model: @recipe, local: true) do |form| %>
+                <%= form_with(model: @recipe, url: recipe_path(@recipe), method: :patch, id: 'recipe-form') do |form| %>
                 <div class="custom-control custom-switch">
-                    <%= form.check_box :public, class: "custom-control-input", id: "customSwitch1"   %>
-                        <label class="custom-control-label" for="customSwitch1">Status: </label>
+                        <%= form.check_box :public, class: "custom-control-input", id: "customSwitch1", data: { public: @recipe.public }  %>
+                        <label class="custom-control-label" for="customSwitch1">Public </label>
                 </div>
-
-                    <!--div class="actions">
-                        <%= form.submit %>
-                    </div-->
                 <% end %>
             </div>
             <div class="buttons">
-                    <button>Generate shopping list</button>
-                     <button>Add ingredient</button>
+                    <button><%= link_to "Generate shopping list" %></button>
+                    <button><%= link_to "Add ingredient" %></button>
             </div>
         </div>
+
+        <table>
+            <tr>
+                <th>Foods</th>
+                <th>Quantity</th>
+                <th>Value</th>
+                <th>Action</th>
+            </tr>
+           <%@recipe.recipe_foods.each do |food| %>
+                <tr>
+                    <td><%= food.food.name %></td>
+                    <td><%= food.food.quantity %> <%= food.food.measurement_unit %></td>
+                    <td>$<%= food.food.price %></td>
+                    <td class="remove-modify">
+                        <%= link_to "Modify" %>
+                        <span class="remove"><%= link_to "Remove" %></span>
+                    </td>
+                </tr>
+           <%end%>
+        </table>
         
 </div>
