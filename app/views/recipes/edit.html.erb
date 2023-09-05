@@ -3,11 +3,36 @@
 <h1>Edit Recipe</h1>
 
 <%= form_for(@recipe) do |f| %>
-  <!-- Add form fields for editing recipe attributes -->
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: 'form-control', placeholder: 'Recipe Name' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :description %>
+    <%= f.text_area :description, class: 'form-control', placeholder: 'Recipe Description' %>
+  </div>
+
+  <div class="form-group">
+  <%= f.label :preparation_time %>
+  <%= f.number_field :preperation_time, class: 'form-control', placeholder: 'Preparation Time (minutes)' %>
+</div>
+
+
+  <div class="form-group">
+    <%= f.label :cooking_time %>
+    <%= f.number_field :cooking_time, class: 'form-control', placeholder: 'Cooking Time (minutes)' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :public %>
+    <%= f.check_box :public, class: 'form-check-input' %>
+    <%= f.label :public, class: 'form-check-label' %>
+  </div>
 
   <!-- Add other form fields as needed -->
 
-  <%= f.submit "Update Recipe" %>
+  <div class="form-group">
+    <%= f.submit "Update Recipe", class: 'btn btn-primary' %>
+  </div>
 <% end %>
