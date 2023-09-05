@@ -1,1 +1,21 @@
-<h1>Index<h1>
+<div class="list-food">
+     <div class="buttons li-foo">
+    <button><%= link_to "Add ingredient" , "/foods/new" %></button>
+    </div>
+    <table>
+        <tr>
+            <th>Foods</th>
+            <th>Quantity</th>
+            <th>Action</th>
+        </tr>
+            <%@foods.each do |food| %>
+            <tr>
+                <td><%= food.name %></td>
+                <td><%= food.quantity %> <%= food.measurement_unit %></td>
+                <td class="remove-modify">
+                <span class="remove"><%= link_to "Delete" %></span>
+                </td>
+            </tr>
+            <%end%>
+    </table>
+</div>

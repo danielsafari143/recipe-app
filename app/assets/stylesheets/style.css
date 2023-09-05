@@ -227,3 +227,11 @@ tr:nth-child(even) {
   margin-top: 50px;
   padding: 20px;
 }
+
+.li-foo {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
