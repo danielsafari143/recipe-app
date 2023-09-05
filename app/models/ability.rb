@@ -13,12 +13,8 @@ class Ability
     can :read, Recipe do |recipe|
       user == recipe.user
     end
-
-    # can :read, Food do |food|
-    #  puts "==============#{food.recipe}"
-     
-    # end
     
+    can :create, Food , user: user
     # Define abilities for the user here. For example:
     #
     #   return unless user.present?
