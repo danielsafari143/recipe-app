@@ -138,15 +138,15 @@ GEM
     net-smtp (0.3.3)
       net-protocol
     nio4r (2.5.9)
-    nokogiri (1.15.4-x64-mingw32)
+    nokogiri (1.15.4-x64-mingw-ucrt)
       racc (~> 1.4)
     orm_adapter (0.5.0)
     parallel (1.23.0)
     parser (3.2.2.3)
       ast (~> 2.4.1)
       racc
-    pg (1.5.4-x64-mingw32)
-    psych (5.1.0)
+    pg (1.5.4-x64-mingw-ucrt)
+    psych (4.0.6)
       stringio
     public_suffix (5.0.3)
     puma (5.6.7)
@@ -194,7 +194,7 @@ GEM
       actionpack (>= 5.2)
       railties (>= 5.2)
     rexml (3.2.6)
-    rubocop (1.56.0)
+    rubocop (1.56.2)
       base64 (~> 0.1.1)
       json (~> 2.3)
       language_server-protocol (>= 3.17.0)
@@ -210,7 +210,7 @@ GEM
       parser (>= 3.2.1.0)
     ruby-progressbar (1.13.0)
     rubyzip (2.3.2)
-    selenium-webdriver (4.9.0)
+    selenium-webdriver (4.10.0)
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
@@ -255,7 +255,7 @@ GEM
     zeitwerk (2.6.11)
 
 PLATFORMS
-  x64-mingw32
+  x64-mingw-ucrt
 
 DEPENDENCIES
   bootsnap
@@ -266,6 +266,7 @@ DEPENDENCIES
   importmap-rails
   jbuilder
   pg (~> 1.1)
+  psych (~> 4.0)
   puma (~> 5.0)
   rails (~> 7.0.7, >= 7.0.7.2)
   rubocop (>= 1.0, < 2.0)
@@ -278,7 +279,7 @@ DEPENDENCIES
   webdrivers
 
 RUBY VERSION
-   ruby 2.7.8p225
+   ruby 3.2.2p53
 
 BUNDLED WITH
    2.4.18
