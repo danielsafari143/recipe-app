@@ -8,8 +8,8 @@ class RecipesController < ApplicationController
   def show
     @recipe = Recipe.find_by(id: params[:id])
     authorize! :read, @recipe
-  rescue
-    flash.now[:notice] = "You do not have the necessary permissions to view this page."
+  rescue StandardError
+    flash.now[:notice] = 'You do not have the necessary permissions to view this page.'
     render('recipes/error')
   end
 

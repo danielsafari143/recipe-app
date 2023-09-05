@@ -6,15 +6,15 @@ class Ability
 
     can :read, Recipe, &:public
 
-    can :create , Recipe do |recipe|
+    can :create, Recipe do |recipe|
       user == recipe.user
     end
 
     can :read, Recipe do |recipe|
       user == recipe.user
     end
-    
-    can :create, Food , user: user
+
+    can :create, Food, user: user
     # Define abilities for the user here. For example:
     #
     #   return unless user.present?
