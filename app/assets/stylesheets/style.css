@@ -124,11 +124,24 @@ h2 {
   text-decoration: none;
 }
 
+.remove a {
+  color: red;
+}
+
 .recipe-item-para button {
   padding: 10px;
   border-radius: 5px;
   background-color: rgb(111, 111, 233);
   border: none;
+}
+
+.remove-modify a {
+  color: rgb(111, 111, 233);
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 5px;
+  padding: 4px;
+  border-radius: 5px;
 }
 
 .recipe-item-para button a {
@@ -187,42 +200,30 @@ h2 {
   background-color: rgb(111, 111, 233);
   border: none;
 }
+
 .buttons button a {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }
 
 table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-  }
-  
-  td, th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-  }
-  
-  tr:nth-child(even) {
-    background-color: #dddddd;
-  }
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
 
-  .remove-modify a{
-    color: rgb(111, 111, 233);
-    text-decoration: none;
-    font-weight: 600;
-    margin-left: 5px;
-    padding: 4px;
-    border-radius: 5px;
+td,
+th {
+  border: 1px solid #ddd;
+  text-align: left;
+  padding: 8px;
+}
 
-  }
+tr:nth-child(even) {
+  background-color: #ddd;
+}
 
-  .remove a{
-    color: red;
-  }
-
-  .cust {
-    margin-top: 50px;
-    padding: 20px;
-  }
+.cust {
+  margin-top: 50px;
+  padding: 20px;
+}
