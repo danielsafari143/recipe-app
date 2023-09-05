@@ -221,3 +221,8 @@ table {
   .remove a{
     color: red;
   }
+
+  .cust {
+    margin-top: 50px;
+    padding: 20px;
+  }

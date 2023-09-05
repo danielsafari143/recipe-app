@@ -7,6 +7,10 @@ class RecipesController < ApplicationController
 
   def show
     @recipe = Recipe.find_by(id: params[:id])
+    authorize! :read, @recipe
+  rescue
+    flash.now[:notice] = "You do not have the necessary permissions to view this page."
+    render('recipes/error')
   end
 
   def destroy
@@ -16,9 +20,9 @@ class RecipesController < ApplicationController
     redirect_to '/index'
   end
 
-  def update 
-   @recipe = Recipe.find_by(id: params[:id])
-   @recipe.public = !@recipe.public
-   @recipe.save
+  def update
+    @recipe = Recipe.find_by(id: params[:id])
+    @recipe.public = !@recipe.public
+    @recipe.save
   end
 end
