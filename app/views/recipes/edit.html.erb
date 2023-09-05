@@ -14,10 +14,9 @@
   </div>
 
   <div class="form-group">
-  <%= f.label :preparation_time %>
-  <%= f.number_field :preperation_time, class: 'form-control', placeholder: 'Preparation Time (minutes)' %>
-</div>
-
+    <%= f.label :preparation_time %>
+    <%= f.number_field :preperation_time, class: 'form-control', placeholder: 'Preparation Time (minutes)' %>
+  </div>
 
   <div class="form-group">
     <%= f.label :cooking_time %>
@@ -27,7 +26,6 @@
   <div class="form-group">
     <%= f.label :public %>
     <%= f.check_box :public, class: 'form-check-input' %>
-    <%= f.label :public, class: 'form-check-label' %>
   </div>
 
   <!-- Add other form fields as needed -->
@@ -35,4 +33,10 @@
   <div class="form-group">
     <%= f.submit "Update Recipe", class: 'btn btn-primary' %>
   </div>
+
+<!-- "Back to Home" button to redirect to the home page -->
+  <div class="form-group"><%= link_to 'Back to Home', root_path, class: 'btn btn-secondary' %></div>
 <% end %>
+
+
+
