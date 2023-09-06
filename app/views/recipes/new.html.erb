@@ -1,0 +1,31 @@
+
+
+<%= form_with(model: Recipe , url: "/recipes" ) do |f| %> 
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Preparation %><br />
+    <%= f.text_field :preperation_time %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Cooking_time %><br />
+    <%= f.number_field :cooking_time %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Description %><br />
+    <%= f.text_area :description %>
+  </div>
+
+  <div class="custom-control custom-switch publi-switch">
+            <%= f.check_box :public, class: "custom-control-input", id: "customSwitch1" %>
+            <label class="custom-control-label" for="customSwitch1">Public </label>
+    </div>
+  <div class="actions">
+    <%= f.submit "Add Recipe" %>
+  </div>
+<% end %>

@@ -16,10 +16,9 @@ class FoodsController < ApplicationController
   end
 
   def destroy
-    @recipe = Recipe.find_by(id: params[:id])
-    authorize! :destroy, @recipe
-    @recipe.destroy
-    redirect_to '/index'
+    @food = Food.find_by(id: params[:id])
+    @food.destroy
+    redirect_to '/foods'
   end
 
   def show; end
