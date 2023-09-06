@@ -3,6 +3,18 @@ class Ability
 
   def initialize(user)
     can :destroy, Recipe, user: user
+
+    can :read, Recipe, &:public
+
+    can :create, Recipe do |recipe|
+      user == recipe.user
+    end
+
+    can :read, Recipe do |recipe|
+      user == recipe.user
+    end
+
+    can :create, Food, user: user
     # Define abilities for the user here. For example:
     #
     #   return unless user.present?

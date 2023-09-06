@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@200&family=Montserrat&family=Nunito&family=Orbitron&family=Rajdhani:wght@300&family=Roboto+Slab:wght@200&family=Saira:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400&family=Montserrat&family=Nunito&family=Orbitron&family=Rajdhani:wght@400&family=Roboto+Slab:wght@400&family=Saira:wght@400&display=swap');
 
 * {
   padding: 0;
@@ -8,6 +8,7 @@
 }
 
 body {
+  padding: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -90,6 +91,8 @@ h2 {
 }
 
 .recipe-item {
+  font-family: 'Gothic A1', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -121,6 +124,10 @@ h2 {
   text-decoration: none;
 }
 
+.remove a {
+  color: red;
+}
+
 .recipe-item-para button {
   padding: 10px;
   border-radius: 5px;
@@ -128,7 +135,103 @@ h2 {
   border: none;
 }
 
+.remove-modify a {
+  color: rgb(111, 111, 233);
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 5px;
+  padding: 4px;
+  border-radius: 5px;
+}
+
 .recipe-item-para button a {
   color: white;
   text-decoration: none;
+}
+
+.recipe-title {
+  font-family: 'Gothic A1', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Nunito', sans-serif;
+  font-family: 'Orbitron', sans-serif;
+  font-family: 'Rajdhani', sans-serif;
+  font-family: 'Roboto Slab', serif;
+  font-family: 'Saira', sans-serif;
+}
+
+.recipe-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+  padding: 10px;
+  gap: 20px;
+}
+
+.detail-item {
+  font-family: 'Gothic A1', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 80vw;
+}
+
+.rcp-step {
+  font-size: large;
+  font-weight: bolder;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 80vw;
+  padding: 10px;
+}
+
+.buttons button {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: rgb(111, 111, 233);
+  border: none;
+}
+
+.buttons button a {
+  text-decoration: none;
+  color: white;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #ddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #ddd;
+}
+
+.cust {
+  margin-top: 50px;
+  padding: 20px;
+}
+
+.li-foo {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 }
