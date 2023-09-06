@@ -1,6 +1,7 @@
+
 <div class="list-food">
      <div class="buttons li-foo">
-    <button><%= link_to "Add ingredient" , new_food_path %></button>
+    <button><%= link_to "Add Food" , new_food_path %></button>
     </div>
     <table>
         <tr>
@@ -13,7 +14,7 @@
                 <td><%= food.name %></td>
                 <td><%= food.quantity %> <%= food.measurement_unit %></td>
                 <td class="remove-modify">
-                <span class="remove"><%= link_to "Delete" , food_path(food), data: { method: :delete }%></span>
+                <span class="remove"><%= link_to "Delete" , url_for(action: 'destroy' , id: food.id ) , data: {turbo_method: :delete}%></span>
                 </td>
             </tr>
             <%end%>
