@@ -3,8 +3,9 @@ Rails.application.routes.draw do
   root to: 'recipes#index'
 
   get '/general_shopping_list' , to: 'recipes#index'
+  get '/public_recipes' , to: 'public_recipes#index'
 
-  resources :recipes , :foods do
+  resources :recipes, :foods do
     resources :recipe_foods
   end
 
