@@ -11,8 +11,8 @@ class FoodsController < ApplicationController
   def create
     para = params[:food]
     Food.create('name' => para['name'], 'measurement_unit' => para['measurement_unit'],
-                       'price' => para['price'], 'quantity' => para['quantity'], 'user' => current_user)
-    redirect_to "/foods"
+                'price' => para['price'], 'quantity' => para['quantity'], 'user' => current_user)
+    redirect_to '/foods'
   end
 
   def destroy
@@ -22,6 +22,5 @@ class FoodsController < ApplicationController
     redirect_to '/index'
   end
 
-  def show
-  end
+  def show; end
 end

@@ -18,5 +18,4 @@ class RecipeFoodsController < ApplicationController
     flash.now[:notice] = 'You do not have the necessary permissions to add new ingredients.'
     render('recipes/error')
   end
-  
 end
