@@ -1,6 +1,5 @@
 <div class="recipe-detail">
         <h2 class="recipe-title"><%= @recipe.name%></h2>
-
         <div class="detail">
             <div class="detail-item">
                 <div>
@@ -8,7 +7,6 @@
                     <p>Cooking time : <%= @recipe.cooking_time%> hour</p>
                     <p class="rcp-step">Steps goes here. . .</p>
                 </div>
-                
                 <%= form_with(model: @recipe, url: recipe_path(@recipe), method: :patch, id: 'recipe-form') do |form| %>
                 <div class="custom-control custom-switch">
                         <%= form.check_box :public, class: "custom-control-input", id: "customSwitch1", data: { public: @recipe.public }  %>
@@ -21,7 +19,6 @@
                     <button><%= link_to "Add ingredient" , "#{@recipe.id}/recipe_foods/new" %></button>
             </div>
         </div>
-
         <table>
             <tr>
                 <th>Foods</th>
@@ -41,5 +38,4 @@
                 </tr>
            <%end%>
         </table>
-        
 </div>
