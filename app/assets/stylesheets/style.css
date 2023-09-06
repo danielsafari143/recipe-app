@@ -144,6 +144,11 @@ h2 {
   border-radius: 5px;
 }
 
+.realroot a {
+  color: white;
+  padding: 5px;
+}
+
 .recipe-item-para button a {
   color: white;
   text-decoration: none;
@@ -260,9 +265,4 @@ tr:nth-child(even) {
   font-family: 'Saira', sans-serif;
   font-size: larger;
   font-weight: bolder;
-}
-
-.realroot a{
- color: white;
- padding: 5px;
 }

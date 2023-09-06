@@ -15,7 +15,7 @@ class RecipesController < ApplicationController
 
   def create
     recipe = params[:recipe]
-    recipe["user"]  = current_user
+    recipe['user'] = current_user
     params.permit!
     Recipe.create(recipe)
     redirect_to '/recipes'
