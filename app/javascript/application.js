@@ -2,12 +2,18 @@
 import "@hotwired/turbo-rails"
 import "controllers"
 
-try {
-    let too = document.getElementById('customSwitch1')
-    too.addEventListener('change' , () => {
-        let toogle = document.getElementById('recipe-form')
-        toogle.submit()
-    })
-} catch (error) {
-    console.log()
-}
+document.addEventListener("turbo:load", (event) => {
+    try {
+        let too = document.getElementById('customSwitch1')
+        too.addEventListener('change' , () => {
+            let toogle = document.getElementById('recipe-form')
+            toogle.submit()
+        })
+    } catch (error) {
+        console.log()
+    }
+  
+    const hiddenElements = document.querySelectorAll(".hidden");
+    hiddenElements.forEach((el) => observer.observe(el));
+  });
+
