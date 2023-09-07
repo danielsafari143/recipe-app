@@ -1,20 +1,7 @@
 
 
-<%= form_with(model: @recipe.foods , url: "/recipes/#{@recipe.id}/recipe_foods" ) do |f| %> 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :Unit %><br />
-    <%= f.text_field :measurement_unit %>
-  </div>
-
-  <div class="field">
-    <%= f.label :Price %><br />
-    <%= f.number_field :price %>
-  </div>
+<%= form_with(model: @recipe.foods.includes(:user) , url: "/recipes/#{@recipe.id}/recipe_foods" ) do |f| %> 
+  <%= select_tag(:name, options_for_select(current_user.foods.map { |food| [food.name, food.id] })) %>
 
   <div class="field">
     <%= f.label :Quantity %><br />

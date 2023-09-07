@@ -2,11 +2,12 @@ class RecipeFoodsController < ApplicationController
   def create
     recipe = Recipe.find_by(id: params[:recipe_id])
     params.permit!
-    para = params[:food]
-    food = Food.new('name' => para['name'], 'measurement_unit' => para['measurement_unit'],
-                       'price' => para['price'], 'quantity' => para['quantity'], 'user' => current_user)
-    RecipeFood.create('quantity' => food.quantity, 'recipe' => recipe, 'food' => food)
-
+    para = params[:name]
+    food = Food.find_by(id: para)
+    quantity = params[:food]
+    unless RecipeFood.exists?(food: food)
+      RecipeFood.create('quantity' => quantity['quantity'], 'recipe' => recipe, 'food' => food)
+    end
     redirect_to "/recipes/#{params[:recipe_id]}"
   end
 

@@ -1,3 +1,4 @@
+<%= render "forms/navbar"%>
 <div class="recipe-detail">
         <h2 class="recipe-title"><%= @recipe.name%></h2>
         <div class="detail">
@@ -15,7 +16,7 @@
                 <% end %>
             </div>
             <div class="buttons">
-                    <button><%= link_to "Generate shopping list" , "/general_shopping_list" %></button>
+                    <button><%= link_to "Generate shopping list", url_for(general_shopping_list_path(id: @recipe.id)) %></button>
                     <button><%= link_to "Add ingredient" , "#{@recipe.id}/recipe_foods/new" %></button>
             </div>
         </div>
@@ -26,7 +27,7 @@
                 <th>Value</th>
                 <th>Action</th>
             </tr>
-           <%@recipe.recipe_foods.each do |food| %>
+           <%@recipe.recipe_foods.includes(:food).each do |food| %>
                 <tr>
                     <td><%= food.food.name %></td>
                     <td><%= food.food.quantity %> <%= food.food.measurement_unit %></td>
