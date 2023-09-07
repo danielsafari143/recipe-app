@@ -144,6 +144,11 @@ h2 {
   border-radius: 5px;
 }
 
+.realroot a {
+  color: white;
+  padding: 5px;
+}
+
 .recipe-item-para button a {
   color: white;
   text-decoration: none;
@@ -234,4 +239,30 @@ tr:nth-child(even) {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+}
+
+#recipe_description {
+  padding: 10px;
+  width: 30vw;
+  height: 25vh;
+}
+
+.publi-switch {
+  align-self: flex-start;
+}
+
+.nava {
+  color: white;
+  width: 80vw;
+  background-color: rgb(111, 111, 233);
+  margin-bottom: 20px;
+}
+
+.nava h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-family: 'Rajdhani', sans-serif;
+  font-family: 'Roboto Slab', serif;
+  font-family: 'Saira', sans-serif;
+  font-size: larger;
+  font-weight: bolder;
 }
