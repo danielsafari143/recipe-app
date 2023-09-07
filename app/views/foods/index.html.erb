@@ -10,13 +10,15 @@
             <th>Action</th>
         </tr>
             <%@foods.each do |food| %>
-            <tr>
-                <td><%= food.name %></td>
-                <td><%= food.quantity %> <%= food.measurement_unit %></td>
-                <td class="remove-modify">
-                <span class="remove"><%= link_to "Delete" , url_for(action: 'destroy' , id: food.id ) , data: {turbo_method: :delete}%></span>
-                </td>
-            </tr>
+                <%unless food.recipe_foods.any? %>
+                    <tr>
+                        <td><%= food.name %></td>
+                        <td><%= food.quantity %> <%= food.measurement_unit %></td>
+                        <td class="remove-modify">
+                        <span class="remove"><%= link_to "Delete" , url_for(action: 'destroy' , id: food.id ) , data: {turbo_method: :delete}%></span>
+                        </td>
+                    </tr>
+                <%end%>
             <%end%>
     </table>
 </div>

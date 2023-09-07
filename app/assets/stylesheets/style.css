@@ -254,6 +254,7 @@ tr:nth-child(even) {
 .nava {
   color: white;
   width: 80vw;
+  padding: 10px;
   background-color: rgb(111, 111, 233);
   margin-bottom: 20px;
 }
