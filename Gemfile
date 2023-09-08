@@ -50,8 +50,8 @@ group :test do
   gem 'selenium-webdriver'
   gem 'webdrivers'
 end
-gem 'rubocop', '>= 1.0', '< 2.0'
 gem 'cancancan'
 gem 'devise', '~> 4.9'
+gem 'psych', '~> 3.0'
 gem 'rails-controller-testing'
-gem 'psych'
+gem 'rubocop', '>= 1.0', '< 2.0'
