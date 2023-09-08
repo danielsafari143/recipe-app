@@ -34,7 +34,7 @@
                     <td>$<%= food.food.price.to_i * food.food.quantity.to_i %></td>
                     <td class="remove-modify">
                         <%= link_to "Modify" %>
-                        <span class="remove"><%= link_to "Remove" %></span>
+                        <span class="remove"><%= link_to "Remove" , "/recipes/#{@recipe.id}/recipe_foods/#{food.id}" , data: {turbo_method: :delete}  %></span>
                     </td>
                 </tr>
            <%end%>
