@@ -6,22 +6,22 @@
   </div>
 
   <div class="field">
-    <%= f.label :Preparation %><br />
-    <%= f.text_field :preperation_time %>
+    <%= f.label :preparation %><br />
+    <%= f.text_field :preperation_time , autofocus: true%>
   </div>
 
   <div class="field">
-    <%= f.label :Cooking_time %><br />
-    <%= f.number_field :cooking_time %>
+    <%= f.label :cooking_time %><br />
+    <%= f.number_field :cooking_time , autofocus: true%>
   </div>
 
   <div class="field">
-    <%= f.label :Description %><br />
-    <%= f.text_area :description %>
+    <%= f.label :description %><br />
+    <%= f.text_area :description , autofocus: true%>
   </div>
 
   <div class="custom-control custom-switch publi-switch">
-            <%= f.check_box :public, class: "custom-control-input", id: "customSwitch1" %>
+            <%= f.check_box :public, class: "custom-control-input", id: "customSwitch1" , autofocus: true %>
             <label class="custom-control-label" for="customSwitch1">Public </label>
     </div>
   <div class="actions">
