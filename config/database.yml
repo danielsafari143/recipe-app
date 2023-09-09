@@ -27,7 +27,7 @@ development:
   port: 5432
   database: recipe
   username: postgres
-  password: uchenna4A3@
+  password: safari
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -65,7 +65,7 @@ test:
   port: 5432
   database: recipe
   username: postgres
-  password: uchenna4A3@
+  password: safari
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -89,6 +89,7 @@ test:
 #
 production:
   <<: *default
-  database: blog_app_production
-  username: blog_app
-  password: <%= ENV["BLOG_APP_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
+  database: recipe_ufkl
+  username: recipe_ufkl_user
+  password: <%= ENV["DATABASE_PASSWORD"] %>
