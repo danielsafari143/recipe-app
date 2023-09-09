@@ -1,0 +1,22 @@
+<%= render "forms/navbar"%>
+<div class="list-food">
+     <div class="buttons li-foo">
+    <button><%= link_to "Add Food" , new_food_path %></button>
+    </div>
+    <table>
+        <tr>
+            <th>Foods</th>
+            <th>Quantity</th>
+            <th>Action</th>
+        </tr>
+            <%@foods.each do |food| %>
+                    <tr>
+                        <td><%= food.name %></td>
+                        <td><%= food.quantity %> <%= food.measurement_unit %></td>
+                        <td class="remove-modify">
+                        <span class="remove"><%= link_to "Delete" , url_for(action: 'destroy' , id: food.id ) , data: {turbo_method: :delete}%></span>
+                        </td>
+                    </tr>
+            <%end%>
+    </table>
+</div>
