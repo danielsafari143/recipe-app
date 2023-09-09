@@ -22,7 +22,7 @@
 
 # 📖 [Recipe-App] <a name="about-project"></a>
 
-The **Blog** is app is a classic example of a Recipe blog website. It's a fully functional website that will show the list of posts and empower readers to interact with them by adding comments and liking posts.
+The Recipe app keeps track of all your recipes, ingredients, and inventory. It will allow you to save ingredients, keep track of what you have, create recipes, and generate a shopping list based on what you have and what you are missing from a recipe. Also, since sharing recipes is an important part of cooking the app should allow you to make them public so anyone can access them.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -70,9 +70,8 @@ To get a local copy up and running, follow these steps.
 ### Prerequisites
 
 - Ruby (ruby --version)
-- SQLite3 (sqlite3 --version)
-- Node.js (node --version)
-- Yarn (yarn --version)
+- Postgress
+- Ruby on Rails 
 
 ### Install
 
@@ -114,6 +113,13 @@ OR
 $ rails s
 
 ```
+test
+
+```sh
+$ rspec
+
+```
+
 
 visit [localhost](http://localhost:3000/) in your browser!
 

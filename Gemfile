@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
-ruby '3.2.2'
+ruby '2.7.8'
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.0.7', '>= 7.0.7.2'
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
@@ -50,8 +50,8 @@ group :test do
   gem 'selenium-webdriver'
   gem 'webdrivers'
 end
-gem 'rubocop', '>= 1.0', '< 2.0'
 gem 'cancancan'
 gem 'devise', '~> 4.9'
+gem 'psych', '~> 3.0'
 gem 'rails-controller-testing'
-gem 'psych'
+gem 'rubocop', '>= 1.0', '< 2.0'
